@@ -15,14 +15,15 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            opacity: 0;
-            animation: fadeIn 2s forwards; /* Fade in the whole page */
         }
         header {
             background-color: #0077b6;
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         header h1 {
             margin: 0;
@@ -95,12 +96,6 @@
             footer {
                 position: relative;
             }
-        }
-
-        /* Animation for fading in the page */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         /* Animation for sliding in sections */
