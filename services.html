@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Services - NRoute Travels</title>
     <style>
         body {
@@ -11,25 +11,30 @@
             padding: 0;
             background-color: #f0f0f0;
         }
+
         header {
             background-color: #0077b6;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
             font-size: 2.5em;
         }
+
         header p {
             font-size: 1.2em;
             font-style: italic;
         }
+
         nav {
             background-color: #023e8a;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: white;
             padding: 14px 20px;
@@ -37,40 +42,44 @@
             margin: 0 15px;
             display: inline-block;
         }
+
         nav a:hover {
             background-color: #48cae4;
             border-radius: 5px;
         }
+
         section {
-            padding: 40px;
+            padding: 40px 20px 100px;
             text-align: center;
         }
-        section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+
+        h2 {
+            color: #023e8a;
         }
-        section h3 {
-            font-size: 1.8em;
-            margin-top: 20px;
+
+        .service {
+            margin-bottom: 40px;
         }
+
+        .service img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
         footer {
             background-color: #023e8a;
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            width: 100%;
+            position: relative;
             bottom: 0;
-        }
-        a {
-            color: #0077b6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            width: 100%;
         }
 
-        /* Mobile responsiveness */
+        /* Mobile Responsive */
         @media only screen and (max-width: 768px) {
             header h1 {
                 font-size: 2em;
@@ -89,18 +98,6 @@
 
             section {
                 padding: 20px;
-            }
-
-            section h2 {
-                font-size: 2em;
-            }
-
-            section h3 {
-                font-size: 1.5em;
-            }
-
-            footer {
-                position: relative;
             }
         }
     </style>
@@ -122,19 +119,30 @@
 
 <section>
     <h2>Our Services</h2>
-    <p>At NRoute Travels, we offer a variety of services to ensure that your travel experiences are as seamless and enjoyable as possible. Whether you're planning a getaway or a business trip, we've got you covered with tailored solutions.</p>
-    
-    <h3>Custom Travel Packages</h3>
-    <p>We design custom travel packages based on your interests and budget, making sure your journey is unique and memorable.</p>
-    
-    <h3>Group Travel</h3>
-    <p>Organizing a trip with friends or colleagues? We specialize in group travel and will ensure that everyone has a fantastic experience together.</p>
-    
-    <h3>Corporate Travel</h3>
-    <p>From conferences to corporate retreats, we provide a range of services designed to meet the needs of businesses and their teams.</p>
-    
-    <h3>Honeymoon Packages</h3>
-    <p>Celebrate your love with our curated honeymoon packages. We offer exclusive destinations that are perfect for a romantic getaway.</p>
+
+    <div class="service">
+        <h3>Custom Travel Packages</h3>
+        <p>Tailor-made itineraries that suit your preferences and budget, from weekend getaways to international vacations.</p>
+        <img src="custom.png" alt="Custom Travel Packages">
+    </div>
+
+    <div class="service">
+        <h3>Group Travel</h3>
+        <p>Fun and affordable group tours for families, friends, or corporate teams with special discounts and packages.</p>
+        <img src="group.png" alt="Group Travel">
+    </div>
+
+    <div class="service">
+        <h3>Corporate Travel</h3>
+        <p>Efficient business travel solutions, including flights, hotels, and transport for conferences or meetings.</p>
+        <img src="corporate.png" alt="Corporate Travel">
+    </div>
+
+    <div class="service">
+        <h3>Honeymoon Packages</h3>
+        <p>Romantic destinations curated for unforgettable honeymoon experiences. Special offers for newlyweds!</p>
+        <img src="honeymoon.png" alt="Honeymoon Packages">
+    </div>
 </section>
 
 <footer>
