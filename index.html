@@ -146,6 +146,20 @@
       color: gray;
     }
 
+    form {
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-family: 'Quicksand', sans-serif;
+    }
+
     @media only screen and (max-width: 768px) {
       nav a {
         display: block;
@@ -183,7 +197,15 @@
 <section>
   <h2>Welcome to NRoute Travels!</h2>
   <p>Your journey starts here. We offer the best travel packages and experiences tailored just for you.</p>
-  <button onclick="window.location.href='https://forms.gle/RUBUZjyjgCSVkFzk9'">Book Now</button>
+
+  <form id="query-form" onsubmit="submitQuery(event)">
+    <h3>Send Your Query</h3>
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="email" id="email" placeholder="Your Email" required><br>
+    <textarea id="message" placeholder="Your Query" rows="4" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
   <br>
   <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode 🌗</button>
 </section>
@@ -251,6 +273,18 @@
 
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
+  }
+
+  function submitQuery(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name && email && message) {
+      alert(`Thank you, ${name}! Your query has been submitted.`);
+      document.getElementById("query-form").reset();
+    }
   }
 
   setInterval(updateClocks, 1000);
